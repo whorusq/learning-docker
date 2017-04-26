@@ -1,14 +1,14 @@
 ##############################################################
 # 基于官方基础镜像 Ubuntu 16.04 制作的工具镜像
-# 包含常用工具：wget curl ssh supervisor gcc cmake
-# VERSION 0.1
+# 包含常用工具：vim wget curl ssh sudo supervisor
+# VERSION 0.2
 ##############################################################
 
 FROM ubuntu:16.04
 MAINTAINER whoru.S.Q <whoru.sun@gmail.com>
 
 # 预安装的工具包 
-ENV DEV_TOOLS='wget curl openssh-server supervisor' 
+ENV DEV_TOOLS='vim wget curl openssh-server sudo supervisor' 
 
 # 系统初始化
 COPY sources.1604.list /etc/apt/sources.list 
@@ -25,7 +25,7 @@ RUN apt-get update \
 	&& echo 'admin	ALL=(ALL)	ALL' >> /etc/sudoers \
 
 	# 禁止 root 通过 ssh 登录
-	&& sed -i 's/PermitRootLogin without-password/PermitRootLogin no/g' /etc/ssh/sshd_config \
+	&& sed -i 's/PermitRootLogin.*/PermitRootLogin no/g' /etc/ssh/sshd_config \
 	
 	# admin 用户的 shell 改回 bash
 	&& usermod -s /bin/bash admin \
