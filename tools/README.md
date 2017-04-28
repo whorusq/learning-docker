@@ -3,14 +3,20 @@
 + 基于官方镜像 Ubuntu 16.04
 + 安装常用工具 
 
+	- software-properties-common
 	- wget
 	- curl
 	- vim
 	- ssh
 	- sudo
 	- supervisor
+	- lsof
+	- zip
+	- unzip
+	- net-tools
+	- inetutils-ping
 
-+ 禁止 root 远程登录，添加普通用户 admin/admin
++ 添加普通用户 admin/admin，可以 ssh 登录
 + 使用 supervisor 启动、管理进程
 
 ### 编译镜像
