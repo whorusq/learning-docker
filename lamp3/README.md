@@ -9,7 +9,7 @@ lamp3（基于 Compose 管理的 LAMP 运行环境）
 
 ### 启动
 
-```
+```bash
 $ docker-compose up
 ```
 
@@ -17,14 +17,14 @@ $ docker-compose up
 
 浏览器访问 localhost 或 dev.www（/etc/hosts 文件追加 `127.0.0.1 dev.www`）
 
-```
+```bash
 # 如果服务正常，可 ctrl+c 关闭，并追加 -d 参数在后台启动运行
 $ docker-compose up -d
 ```
 
 ### 查看启动的服务
 
-```
+```bash
 $ docker-compose ps
       Name                     Command               State           Ports          
 -----------------------------------------------------------------------------------
@@ -34,7 +34,7 @@ lamp_php_apache_1   docker-php-entrypoint apac ...   Up      0.0.0.0:80->80/tcp
 
 ### 关闭、删除服务
 
-```
+```bash
 $ docker-compose stop
 $ docker-compose rm
 ```
