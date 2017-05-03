@@ -37,7 +37,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
 # 追加 PHP 自定义配置文件
-#COPY config/php.ini /usr/local/etc/php/
+COPY config/php.ini /usr/local/etc/php/
 
 # 追加 Apache 自定义配置文件
 COPY ./config/apache2.conf /etc/apache2/apache2.conf
