@@ -1,0 +1,26 @@
+##############################################################
+# LAMP 开发环境
+# 应用：Apache、PHP、MySQL
+##############################################################
+
+version: '2'
+
+services:
+  # PHP and Apache
+  php_apache:
+    build: ./php_apache
+    image: lamp/php_apache
+    ports:
+      - "80:80"
+    links:
+      - mysql
+    volumes:
+      - ~/www:/var/www/html
+  # MySQL
+  mysql:
+    build: ./mysql
+    image: lamp/mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~/data/mysql:/var/lib/mysql

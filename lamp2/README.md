@@ -1,4 +1,4 @@
-基于 Dockerfile 的 Fat Container
+lamp2（基于 Dockerfile 的 Fat Container）
 ---
 
 > 此种方式将镜像的构建过程通过 Dockerfile 记录下来，并通过构建命令，构建最终镜像，便于对镜像的修改和管理。
