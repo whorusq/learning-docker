@@ -1,7 +1,9 @@
-![docker logo](./logo.png)
+![docker logo](./docker.png)
+
+
+---
 
 ### 索引
----
 
 + 001: [基础入门篇](./基础入门篇.md)
 + 002: Dockerfile详解
