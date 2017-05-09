@@ -11,9 +11,14 @@ FROM php:5.6-apache
 
 MAINTAINER whoru.S.Q <whoru.sun@gmail.com>
 
+# 时区设置
+ENV TZ=Asia/Shanghai
+
 # 安装其它扩展
 COPY ./source.list /etc/apt/sources.list
-RUN apt-get update \ 
+RUN /bin/cp /usr/share/zoneinfo/$TZ /etc/localtime \
+	&& echo $TZ > /etc/timezone \
+	&& apt-get update \ 
 	&& apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
@@ -31,16 +36,21 @@ RUN apt-get update \
 	# 或 ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
 	&& a2enmod rewrite \
 
+	# 更改 web 根目录属主、属组，避免权限问题 
+	# 运行时用户可通过 phinfo() 中查看 APACHE_RUN_USER 获取
+	# usermod -u 1000 www-data && usermod -G staff www-data
+	#&& chown www-data:www-data /var/www/html \
+
 	# 清理
 	&& apt-get clean \
     && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
 # 追加 PHP 自定义配置文件
-COPY config/php.ini /usr/local/etc/php/
+#COPY config/php.ini /usr/local/etc/php/
 
 # 追加 Apache 自定义配置文件
-COPY ./config/apache2.conf /etc/apache2/apache2.conf
-COPY ./config/sites-available /etc/apache2/sites-available
-COPY ./config/sites-enabled /etc/apache2/sites-enabled
+#COPY ./config/apache2.conf /etc/apache2/apache2.conf
+#COPY ./config/sites-available /etc/apache2/sites-available
+#COPY ./config/sites-enabled /etc/apache2/sites-enabled
 

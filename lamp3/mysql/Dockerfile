@@ -9,6 +9,12 @@ FROM mysql:5.6
 
 MAINTAINER whoru.S.Q <whoru.sun@gmail.com>
 
+# 时区设置
+ENV TZ=Asia/Shanghai
+
 # 写权限
-RUN usermod -u 1000 mysql && chown mysql.mysql /var/run/mysqld/
+RUN /bin/cp /usr/share/zoneinfo/$TZ /etc/localtime \
+	&& echo $TZ > /etc/timezone \
+	&& usermod -u 1000 mysql \
+	&& chown mysql.mysql /var/run/mysqld/
 

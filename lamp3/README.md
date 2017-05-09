@@ -11,6 +11,9 @@ lamp3（基于 Compose 管理的 LAMP 运行环境）
 
 ```bash
 $ docker-compose up
+
+# 或使用 --build 参数，对不存在的镜像进行编译
+$ docker-compose up --build
 ```
 
 ### 测试
@@ -47,3 +50,4 @@ $ docker-compose rm
 > 1. 如果 build 和 image 同时指定，在 docker-compose up 时会首先基于 Dockerfile 编译，并指定镜像名称为 image 参数指定的。
 > 2. 如果只指定 build，则编译后的镜像名称为`根目录+服务名`，如：lamp3_mysql
 > 3. 如果只指定 image，启动时则直接基于对应的本地镜像。
+

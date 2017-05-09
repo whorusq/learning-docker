@@ -6,21 +6,26 @@
 version: '2'
 
 services:
+
   # PHP and Apache
   php_apache:
     build: ./php_apache
     image: lamp/php_apache
     ports:
       - "80:80"
-    links:
-      - mysql
     volumes:
       - ~/www:/var/www/html
+      - ./php_apache/conf/php/php.ini:/usr/local/etc/php/php.ini
+      - ./php_apache/conf/apache/apache2.conf:/etc/apache2/apache2.conf
+      - ./php_apache/conf/apache/sites-available:/etc/apache2/sites-available
+      - ./php_apache/conf/apache/sites-enabled:/etc/apache2/sites-enabled
+
   # MySQL
   mysql:
-    build: ./mysql
+    build: ./mysql                                                                                                                
     image: lamp/mysql
     ports:
       - "3306:3306"
     volumes:
       - ~/data/mysql:/var/lib/mysql
+  
