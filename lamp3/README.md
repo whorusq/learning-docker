@@ -7,6 +7,29 @@ lamp3（基于 Compose 管理的 LAMP 运行环境）
 >
 > Compose 项目由 Python 编写，实现上调用了 Docker 服务提供的 API 来对容器进行管理。因此，只要所操作的平台支持 Docker API，就可以在其上利用 Compose 来进行编排管理。
 
+### 目录结构
+
+```bash
+.
+├── README.md
+├── docker-compose.yml
+├── mysql
+│   └── Dockerfile
+└── php_apache
+    ├── Dockerfile
+    ├── conf
+    │   ├── apache
+    │   │   ├── apache2.conf
+    │   │   ├── sites-available
+    │   │   │   ├── default-ssl.conf
+    │   │   │   └── www.conf
+    │   │   └── sites-enabled
+    │   │       └── www.conf -> ../sites-available/www.conf
+    │   └── php
+    │       └── php.ini
+    └── source.list
+```
+
 ### 启动
 
 ```bash
