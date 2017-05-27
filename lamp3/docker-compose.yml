@@ -3,29 +3,37 @@
 # 应用：Apache、PHP、MySQL
 ##############################################################
 
-version: '2'
-
+version: '3'
 services:
 
   # PHP and Apache
   php_apache:
     build: ./php_apache
+    depends_on:
+      - mysql
     image: lamp/php_apache
+    restart: always
     ports:
       - "80:80"
+      - "8080:8080"
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - ~/www:/var/www/html
       - ./php_apache/conf/php/php.ini:/usr/local/etc/php/php.ini
       - ./php_apache/conf/apache/apache2.conf:/etc/apache2/apache2.conf
+      - ./php_apache/conf/apache/ports.conf:/etc/apache2/ports.conf
       - ./php_apache/conf/apache/sites-available:/etc/apache2/sites-available
       - ./php_apache/conf/apache/sites-enabled:/etc/apache2/sites-enabled
 
   # MySQL
   mysql:
-    build: ./mysql                                                                                                                
+    build: ./mysql
     image: lamp/mysql
+    restart: always
     ports:
       - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
     volumes:
       - ~/data/mysql:/var/lib/mysql
   
