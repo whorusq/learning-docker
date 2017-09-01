@@ -26,7 +26,7 @@ redis               latest              d4f259423416        5 weeks ago         
 #### 2.1. 默认启动
 
 ```
-➜  redis docker run --name myredis -d redis
+➜  docker run --name myredis -d redis
 41f9c2e8fb86c415257c0342eb58435c3a5bbaf10f888a2cb3c7243d08ec796c
 ```
 之后就可以通过客户端程序连接 `127.0.0.1:6379` 来访问了
@@ -34,7 +34,7 @@ redis               latest              d4f259423416        5 weeks ago         
 #### 2.2. 怎么使用 redis-cli 连接容器？
 
 ```bash
-➜  redis docker run -it --link myredis --rm redis redis-cli -h myredis -p 6379
+➜  docker run -it --link myredis --rm redis redis-cli -h myredis -p 6379
 myredis:6379> KEYS *
 (empty list or set)
 myredis:6379> SET name 'xiaoming'
