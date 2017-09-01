@@ -16,7 +16,7 @@
 检查镜像是否拉取成功
 
 ```
-➜  redis docker images
+➜  docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 redis               latest              d4f259423416        5 weeks ago         106MB
 ```
