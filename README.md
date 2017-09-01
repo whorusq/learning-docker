@@ -11,5 +11,8 @@
 	- [lamp2（基于 Dockerfile 形式）](./lamp2/)
 	- [lamp3（基于 Compose 管理形式，推荐）](./lamp3/)
 + 004: Python 环境
-+ 999: 问题
++ 005: Java 环境
++ 006: Node.js 环境
++ 007: [Redis 环境](./redis/)
++ 999: 相关问题
 	- [容器与宿主机时间不同步](./容器与宿主机时间不同步.md)
