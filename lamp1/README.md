@@ -100,10 +100,11 @@ root@86ea8d701da0:/# echo /dev/null > ~/.bash_history
 
 ### 4. 提交变更
 
-```
-# 命令基本语法
-docker commit [选项] <容器ID或容器名> [<仓库名>[:<标签>]]
+命令基本语法
 
+> docker commit [选项] <容器ID或容器名> [<仓库名>[:<标签>]]
+
+```bash
 # 查看当前运行中的容器
 $ docker ps 
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
@@ -133,4 +134,4 @@ root@e629b4c8bb3e:/# exit
 
 ```
 
-浏览器访问：localhost:8888
+浏览器访问：`localhost:8888`

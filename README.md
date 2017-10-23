@@ -4,6 +4,18 @@
 > 
 > Docker 会尽可能的缩短从代码测试到产品部署的时间。
 
+### 相关资源
+
+- 官网地址：[https://www.docker.com](https://www.docker.com)
+- 镜像仓库
+    - 【官方】镜像仓库：[https://store.docker.com](https://store.docker.com)
+    - 【DaoCloud】镜像仓库：[http://hub.daocloud.io](http://hub.daocloud.io)
+    - 【阿里云】镜像仓库：[https://dev.aliyun.com/search.html](https://dev.aliyun.com/search.html)
+- 学习资料
+    - Docker 从入门到实践：[在线阅读](https://github.com/yeasy/docker_practice/blob/master/SUMMARY.md) | [pdf下载](https://www.gitbook.com/download/pdf/book/yeasy/docker_practice) | [epub下载](https://www.gitbook.com/download/epub/book/yeasy/docker_practice)
+    - Docker 中文文档：[http://www.dockerinfo.net/document](http://www.dockerinfo.net/document)
+    - Docker 教程：[http://www.runoob.com/docker/docker-tutorial.html](http://www.runoob.com/docker/docker-tutorial.html)
+
 ### 文章索引
 
 + 001: [基础入门篇](./基础入门篇.md)

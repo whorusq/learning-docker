@@ -6,7 +6,7 @@
 
 拉取镜像
 
-```
+```bash
 # 默认拉取最新版本，目前是 4.0.1
 ➜  docker pull redis
 
@@ -15,7 +15,7 @@
 ```
 检查镜像是否拉取成功
 
-```
+```bash
 ➜  docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 redis               latest              d4f259423416        5 weeks ago         106MB
@@ -25,7 +25,7 @@ redis               latest              d4f259423416        5 weeks ago         
 
 #### 2.1. 默认启动
 
-```
+```bash
 ➜  docker run --name myredis -d redis
 41f9c2e8fb86c415257c0342eb58435c3a5bbaf10f888a2cb3c7243d08ec796c
 ```
