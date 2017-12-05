@@ -1,3 +1,9 @@
+<p align="center">
+	<a href="https://redis.io">
+		<img src="./redis_logo.png" attr="rsync logo" title="官网：https://redis.io" width="60%">
+	</a>
+</p>
+
 
 ### 1. 相关资源
 
