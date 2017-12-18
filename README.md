@@ -23,11 +23,11 @@
 
 ### 文章索引
 
-+ 1. [基础入门篇](./基础入门篇.md)
-+ 2. [Dockerfile介绍](./Dockerfile介绍.md)
-+ 3. docker-compose
++ 01. [基础入门篇](./基础入门篇.md)
++ 02. [Dockerfile介绍](./Dockerfile介绍.md)
++ 03. docker-compose
 + ...
-+ 8. 各类开发环境
++ 08. 各类开发环境
 	- LAMP
 		- [lamp1（基于 虚拟机 形式）](./lamp1/)
 		- [lamp2（基于 Dockerfile 形式）](./lamp2/)
@@ -36,6 +36,6 @@
 	- Java 环境
 	- Node.js 环境
 	- [Redis 环境](./redis/)
-+ 9. 常见问题
++ 09. 常见问题
 	- [容器与宿主机时间不同步](./容器与宿主机时间不同步.md)
 	- [如何安装PHP扩展](./安装PHP扩展.md)
