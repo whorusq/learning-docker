@@ -8,32 +8,44 @@ services:
 
   # PHP and Apache
   php_apache:
-    build: ./php_apache
-    depends_on:
-      - mysql
+    build:
+      context: ./build/php_apache
+      args:
+        VERSION_TAG: 5.6
     image: lamp/php_apache
     restart: always
+    depends_on:
+      - mysql
     ports:
       - "80:80"
-      - "8080:8080"
+      - "8090:8090"
+      - "8091:8091"
+    environment:
+      TZ: "Asia/Shanghai"
     volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ~/www:/var/www/html
-      - ./php_apache/conf/php/php.ini:/usr/local/etc/php/php.ini
-      - ./php_apache/conf/apache/apache2.conf:/etc/apache2/apache2.conf
-      - ./php_apache/conf/apache/ports.conf:/etc/apache2/ports.conf
-      - ./php_apache/conf/apache/sites-available:/etc/apache2/sites-available
-      - ./php_apache/conf/apache/sites-enabled:/etc/apache2/sites-enabled
+      - ./www:/var/www/html:rw
+      - ./conf/php/php.ini:/usr/local/etc/php/php.ini:ro
+      - ./conf/apache/apache2.conf:/etc/apache2/apache2.conf:ro
+      - ./conf/apache/ports.conf:/etc/apache2/ports.conf:ro
+      - ./conf/apache/sites-available:/etc/apache2/sites-available:rw
+      - ./conf/apache/sites-enabled:/etc/apache2/sites-enabled:rw
+    links:
+      - mysql
 
   # MySQL
   mysql:
-    build: ./mysql
+    build:
+      context: ./build/mysql
+      args:
+        VERSION_TAG: 5.6
     image: lamp/mysql
     restart: always
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: 123456
+      TZ: "Asia/Shanghai"
     volumes:
-      - ~/data/mysql:/var/lib/mysql
-  
+      - ./data:/var/lib/mysql:rw
+      - ./log/mysql/:/var/log/mysql/:rw
+
