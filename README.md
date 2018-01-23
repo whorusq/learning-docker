@@ -13,29 +13,29 @@
 
 - 官网地址：[https://www.docker.com](https://www.docker.com)
 - 镜像仓库
-    - 【官方】镜像仓库：[https://store.docker.com](https://store.docker.com)
-    - 【DaoCloud】镜像仓库：[http://hub.daocloud.io](http://hub.daocloud.io)
-    - 【阿里云】镜像仓库：[https://dev.aliyun.com/search.html](https://dev.aliyun.com/search.html)
+    - 官方：[https://store.docker.com](https://store.docker.com)
+    - DaoCloud：[http://hub.daocloud.io](http://hub.daocloud.io)
+    - 阿里云：[https://dev.aliyun.com/search.html](https://dev.aliyun.com/search.html)
 - 学习资料
-    - Docker 从入门到实践：[在线阅读](https://github.com/yeasy/docker_practice/blob/master/SUMMARY.md) | [pdf下载](https://www.gitbook.com/download/pdf/book/yeasy/docker_practice) | [epub下载](https://www.gitbook.com/download/epub/book/yeasy/docker_practice)
+    - Docker 从入门到实践：[Gitbook在线阅读](https://yeasy.gitbooks.io/docker_practice/content/CHANGELOG.html) | [Gitee在线阅读](https://docker_practice.gitee.io) | [pdf下载](https://www.gitbook.com/download/pdf/book/yeasy/docker_practice) | [epub下载](https://www.gitbook.com/download/epub/book/yeasy/docker_practice)
     - Docker 中文文档：[http://www.dockerinfo.net/document](http://www.dockerinfo.net/document)
-    - Docker 教程：[http://www.runoob.com/docker/docker-tutorial.html](http://www.runoob.com/docker/docker-tutorial.html)
-
+	- Docker 问答录（100 问）：[https://blog.lab99.org/post/docker-2016-07-14-faq.html](https://blog.lab99.org/post/docker-2016-07-14-faq.html)
+	
+	
 ### 文章索引
 
-+ 01. [基础入门篇](./基础入门篇.md)
-+ 02. [Dockerfile介绍](./Dockerfile介绍.md)
-+ 03. docker-compose
-+ ...
-+ 08. 各类开发环境
+- [基础入门篇](./基础入门篇.md)
+- [Dockerfile介绍](./Dockerfile介绍.md)
+- docker-compose
+- 各类开发环境
 	- LAMP
 		- [lamp1（基于 虚拟机 形式）](./lamp1/)
 		- [lamp2（基于 Dockerfile 形式）](./lamp2/)
 		- [lamp3（基于 Compose 管理形式，推荐）](./lamp3/)
-	- Python 环境
-	- Java 环境
-	- Node.js 环境
-	- [Redis 环境](./redis/)
-+ 09. 常见问题
+	- Python
+	- Java
+	- Node.js
+	- [Redis](./redis/)
+- 常见问题
 	- [容器与宿主机时间不同步](./容器与宿主机时间不同步.md)
 	- [如何安装PHP扩展](./安装PHP扩展.md)
