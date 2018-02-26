@@ -16,11 +16,11 @@
 - [Dockerfile 介绍](./Dockerfile介绍.md)
 - docker-compose 介绍
 - 各类开发环境
-	- LAMP
+	- LAMP（Apache + MySQL + PHP）
 		- [lamp1（基于 虚拟机 形式）](./lamp1/)
 		- [lamp2（基于 Dockerfile 形式）](./lamp2/)
 		- [lamp3（基于 Compose 管理形式，推荐）](./lamp3/)
-	- LNMPA
+	- [LNMPA（Nginx + MySQL + PHP + Apache）](https://github.com/whorusq/docker-lnmpa)
 	- Python
 	- Java
 	- Node.js
