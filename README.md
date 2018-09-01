@@ -1,7 +1,7 @@
 
 <p align="center">
 	<a href="https://www.docker.com">
-		<img src="./docker.png" attr="rsync logo" title="官网：https://www.docker.com">
+		<img src="./docker.png" attr="docker logo" title="官网：https://www.docker.com">
 	</a>
 </p>
 
