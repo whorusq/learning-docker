@@ -34,7 +34,7 @@
 
 - 官网地址：[https://www.docker.com](https://www.docker.com)
 - 镜像仓库
-    - 官方：[https://store.docker.com](https://store.docker.com)
+    - 官方：[https://hub.docker.com](https://hub.docker.com)
     - DaoCloud：[http://hub.daocloud.io](http://hub.daocloud.io)
     - 阿里云：[https://dev.aliyun.com/search.html](https://dev.aliyun.com/search.html)
 - 学习资料
