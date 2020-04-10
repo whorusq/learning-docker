@@ -64,7 +64,7 @@ myredis:6379> exit
 
 #### 3.4. 自定义配置文件
 
-建议[官网](https://redis.io)下载指定版本的 Redis 源码包，加压后获取默认配置文件 `redis.conf`
+建议[官网](https://redis.io)下载指定版本的 Redis 源码包，解压后获取默认配置文件 `redis.conf`
 
 然后在 Redis 容器启动时如下操作：
 
